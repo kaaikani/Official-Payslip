@@ -11,7 +11,7 @@ function App() {
   const [selectedPayslip, setSelectedPayslip] = useState(null);
   const [error, setError]               = useState("");
   const [isLoading, setIsLoading]       = useState(true);
-  const [selectedCompany, setSelectedCompany] = useState("avs");
+  const [selectedCompany, setSelectedCompany] = useState("");
   const [isDownloading, setIsDownloading] = useState(false);
 
   const payslipRef = useRef(null);
@@ -122,6 +122,7 @@ function App() {
                       value={selectedCompany}
                       onChange={e => setSelectedCompany(e.target.value)}
                     >
+                      <option value="">All Companies</option>
                       <option value="avs">AVS</option>
                       <option value="kaaikani">Kaaikani</option>
                     </select>

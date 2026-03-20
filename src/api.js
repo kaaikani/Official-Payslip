@@ -1,5 +1,4 @@
-const PROXY_URL = 'http://localhost:4000/api/graphql';
-//jhhgfk
+const PROXY_URL = '/api/graphql';
 const EMPLOYEES_QUERY = `
   query GetEmployees {
     employees {

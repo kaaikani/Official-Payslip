@@ -1,0 +1,67 @@
+[
+  {
+    "employeeName": "Manjula Devi",
+    "employeeId": "KK15",
+    "designation": "Dot Net Developer",
+    "department": "8794651253",
+    "dateOfJoining": "2026-03-01",
+    "bankName": "Not Assigned",
+    "bankAccountNo": "Not Assigned",
+    "panNo": "124578la+78c",
+    "uanNo": "xsjsp88888457",
+    "pfNo": "7418596gh",
+    "company": "avs"
+  },
+  {
+    "employeeName": "Durga",
+    "employeeId": "DD20",
+    "designation": "Software Developer",
+    "department": "ABCDE1234F",
+    "dateOfJoining": "2025-07-21",
+    "bankName": "IOB",
+    "bankAccountNo": "IOB123456",
+    "panNo": "PAN123456",
+    "uanNo": "UAN1123234",
+    "pfNo": "PF2324356478",
+    "company": "avs"
+  },
+  {
+    "employeeName": "Shabu",
+    "employeeId": "DD21",
+    "designation": "Software Developer",
+    "department": "ABCDE1234g",
+    "dateOfJoining": "2025-08-21",
+    "bankName": "SBI",
+    "bankAccountNo": "SBI123456ned",
+    "panNo": "PAN12345",
+    "uanNo": "UAN12334567",
+    "pfNo": "PF1234567",
+    "company": "kaaikani"
+  },
+  {
+    "employeeName": "Arjun",
+    "employeeId": "DD22",
+    "designation": "Software",
+    "department": "ABCDE9874F",
+    "dateOfJoining": "2026-03-18",
+    "bankName": "Not Assigned",
+    "bankAccountNo": "Not Assigned",
+    "panNo": null,
+    "uanNo": null,
+    "pfNo": null,
+    "company": "kaaikani"
+  },
+  {
+    "employeeName": "Meena",
+    "employeeId": "DD25",
+    "designation": "Developer",
+    "department": "ABCDE1234F5",
+    "dateOfJoining": "2026-03-01",
+    "bankName": "Not Assigned",
+    "bankAccountNo": "Not Assigned",
+    "panNo": "74185296lmkj",
+    "uanNo": "74185ujnyb",
+    "pfNo": "fghcvb52741963",
+    "company": "avs"
+  }
+]

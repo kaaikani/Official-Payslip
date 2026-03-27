@@ -1,7 +1,7 @@
 const PROXY_URL = '/api/graphql';
 const EMPLOYEES_QUERY = `
   query GetEmployees {
-    employees {
+    employees(first: 100) {
       id
       employeeName
       employeeId

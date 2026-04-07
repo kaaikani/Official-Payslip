@@ -19,7 +19,7 @@ const EditableCell = ({ isDownloading, value, onChange, type = "text", placehold
         ? <span>{value}</span>
         : <input type={type} className={`minimal-input corp-input${type === "number" ? " text-right" : ""}`} placeholder={placeholder} value={value} onChange={e => onChange(e.target.value)} />;
 
-const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdatePayInfo, targetRef, isDownloading }) => {
+const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdatePayInfo, targetRef, isDownloading, selectedCompany }) => {
     const earnings   = data.earning   || [];
     const deductions = data.deduction || [];
 
@@ -36,7 +36,7 @@ const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdat
                         <div className="header-left-group">
                             <div className="logo-box-corporate">
                                 <img
-                                    src="/logo.png"
+                                    src={selectedCompany === "avs" ? "/logo2.png" : "/logo.png"}
                                     alt="Company Logo"
                                     className="company-logo-img corporate-logo"
                                     onError={(e) => {
@@ -45,11 +45,11 @@ const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdat
                                     }}
                                 />
                                 <div className="logo-brand-bg fallback-logo-corporate" style={{ display: 'none' }}>
-                                    <span className="logo-inner-text" style={{ fontWeight: 'bold' }}>KaaiKani</span>
+                                    <span className="logo-inner-text" style={{ fontWeight: 'bold' }}>{selectedCompany === "avs" ? "AVS Exports" : "KaaiKani"}</span>
                                 </div>
                             </div>
                             <div className="header-text-corporate">
-                                <h1 className="company-title-corporate">KaaiKani</h1>
+                                <h1 className="company-title-corporate">{selectedCompany === "avs" ? "AVS Exports" : "KaaiKani"}</h1>
                                 <p className="address-corporate">1st FLOOR, THANGAM HOUSING-II, NO.8B, Thirumalai Naicker St, EXT, Kovil Pappakudi, Madurai, Tamil Nadu</p>
                             </div>
                         </div>

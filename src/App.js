@@ -151,6 +151,7 @@ function App() {
                 onUpdatePayInfo={handleUpdatePayInfo}
                 targetRef={payslipRef}
                 isDownloading={isDownloading}
+                selectedCompany={selectedCompany}
               />
               <div className="download-section card-ui text-center">
                 <button className="btn btn-primary btn-lg" onClick={handleDownloadPdf}>

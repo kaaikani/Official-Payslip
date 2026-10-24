@@ -56,6 +56,8 @@ function App() {
       deduction:  [],
       payMonth,
       payYear,
+      workingDays: '',
+      lopDays:     '',
     });
   };
 

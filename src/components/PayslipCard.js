@@ -14,10 +14,10 @@ const numberToWords = (num) => {
     return convert(num);
 };
 
-const EditableCell = ({ isDownloading, value, onChange, type = "text", placeholder }) =>
+const EditableCell = ({ isDownloading, value, onChange, type = "text", placeholder, alignRight = type === "number", min }) =>
     isDownloading
         ? <span>{value}</span>
-        : <input type={type} className={`minimal-input corp-input${type === "number" ? " text-right" : ""}`} placeholder={placeholder} value={value} onChange={e => onChange(e.target.value)} />;
+        : <input type={type} min={min} className={`minimal-input corp-input${alignRight ? " text-right" : ""}`} placeholder={placeholder} value={value} onChange={e => onChange(e.target.value)} />;
 
 const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdatePayInfo, targetRef, isDownloading, selectedCompany }) => {
     const earnings   = data.earning   || [];
@@ -97,6 +97,12 @@ const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdat
                                             : ''}
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td className="corp-label">No. of Working Days</td>
+                                    <td className="corp-value">
+                                        <EditableCell isDownloading={isDownloading} type="number" min="0" alignRight={false} value={data.workingDays ?? ''} onChange={v => onUpdatePayInfo('workingDays', v)} placeholder="0" />
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -113,6 +119,12 @@ const PayslipCard = ({ data, onAddEarning, onAddDeduction, onUpdateItem, onUpdat
                                 <tr><td className="corp-label">PAN No</td><td className="corp-value">{data.employee?.pan}</td></tr>
                                 <tr><td className="corp-label">UAN No</td><td className="corp-value">{data.employee?.uanNo}</td></tr>
                                 <tr><td className="corp-label">PF No</td><td className="corp-value">{data.employee?.pfNo}</td></tr>
+                                <tr>
+                                    <td className="corp-label">No. of LOP Days</td>
+                                    <td className="corp-value">
+                                        <EditableCell isDownloading={isDownloading} type="number" min="0" alignRight={false} value={data.lopDays ?? ''} onChange={v => onUpdatePayInfo('lopDays', v)} placeholder="0" />
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
